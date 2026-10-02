@@ -13,7 +13,6 @@ sr = pd.Series([5, 6, 2, 9, 12], index=['a', 'b', 'c', 'd', 'e'])
   sr.iloc[1:3] -> два элемента b, c (при позиционных индексах граница НЕ включается).
 """
 
-# TODO
 
 
 """
@@ -26,7 +25,6 @@ pop = pd.Series({'California': 38332521, 'Texas': 26448193, 'New York': 19651127
 г) pop.sort_values(ascending=False).head(2).index.tolist() -> ['California', 'Texas']
 """
 
-# TODO
 
 
 """
@@ -38,7 +36,6 @@ s = pd.Series(['a', 'b', 'c'], index=[1, 3, 5])
 Вывод: в рабочем коде всегда явно пиши .loc или .iloc.
 """
 
-# TODO
 
 
 """
@@ -56,7 +53,6 @@ states = pd.DataFrame({'population': pop, 'area': area})
 Далее в файле states означает этот DataFrame (с density).
 """
 
-# TODO
 
 
 """
@@ -68,7 +64,6 @@ data = {'county': ['Cochice', 'Pima', 'Santa Cruz', 'Maricopa', 'Yuma'],
 Ожидание: shape (5, 2), столбец year отсутствует. Как называется параметр для выбора столбцов?
 """
 
-# TODO
 
 
 """
@@ -79,7 +74,6 @@ rows = [{'a': 1, 'c': 'Alpha'}, {'a': 0, 'b': 3, 'c': 'Beta'}]
 Объясни, почему b стал float64, хотя 3 — целое.
 """
 
-# TODO
 
 
 """
@@ -93,7 +87,6 @@ np1 = np.array([[1, 2, 3], [4, 5, 6]])
 Как получить строку 1 из df? (df.iloc[1])
 """
 
-# TODO
 
 
 """
@@ -107,7 +100,6 @@ np1 = np.array([[1, 2, 3], [4, 5, 6]])
 в) states[['population', 'area']] — shape (5, 2) и тип DataFrame
 """
 
-# TODO
 
 
 """
@@ -119,7 +111,6 @@ np1 = np.array([[1, 2, 3], [4, 5, 6]])
 д) states.iloc[0, 2]                           -> density Калифорнии ≈ 90.41
 """
 
-# TODO
 
 
 """
@@ -130,7 +121,6 @@ np1 = np.array([[1, 2, 3], [4, 5, 6]])
    Ожидание: California, Texas.  Почему здесь & и скобки, а не and?
 """
 
-# TODO
 
 
 """
@@ -142,7 +132,6 @@ np1 = np.array([[1, 2, 3], [4, 5, 6]])
 в) Как правильно обнулить area у строк с density > 100? (через .loc с маской)
 """
 
-# TODO
 
 
 """
@@ -155,7 +144,6 @@ df = pd.DataFrame(np.arange(12).reshape(3, 4), columns=list('ABCD'))
 np.sqrt(df) и df * 2 — убедись, что index и columns те же, исходный df не изменился.
 """
 
-# TODO
 
 
 """
@@ -167,7 +155,6 @@ s2 = pd.Series([10, 20, 30], index=['b', 'c', 'd'])
 Почему в NumPy складывались бы позиции, а в pandas — метки?
 """
 
-# TODO
 
 
 """
@@ -179,7 +166,6 @@ dfb = pd.DataFrame({'B': [10, 20, 30], 'C': [1, 1, 1]}, index=[1, 2, 3])
 и объединение столбцов.
 """
 
-# TODO
 
 
 """
@@ -199,7 +185,6 @@ df = pd.DataFrame({'x': [1, np.nan, 3, np.nan],
 в) почему mean() от булевой маски даёт долю?
 """
 
-# TODO
 
 
 """
@@ -210,7 +195,6 @@ df = pd.DataFrame({'x': [1, np.nan, 3, np.nan],
 г) df.dropna(thresh=2)          -> строки 0, 2, 3 (минимум 2 непустых значения)
 """
 
-# TODO
 
 
 """
@@ -222,7 +206,6 @@ df = pd.DataFrame({'x': [1, np.nan, 3, np.nan],
 В уровне 9 это делается правильно.
 """
 
-# TODO
 
 
 """
@@ -232,7 +215,6 @@ pd.Series([1, 2, None], dtype='Int64')   -> nullable-тип, пропуск по
 Объясни, почему обычный int-столбец не может хранить NaN.
 """
 
-# TODO
 
 
 """
@@ -250,7 +232,6 @@ df = pd.DataFrame({'A': [1, 2, 3, 4, 5], 'B': [10, 20, 30, 40, 50]})
 в) df.sum(), df.median(), df.min(), df.max()
 """
 
-# TODO
 
 
 """
@@ -262,7 +243,6 @@ df['A'].values.std(ddof=1) совпадает с pandas.
 (ddof=0.) Это важно, когда сверяешь свою стандартизацию с sklearn.
 """
 
-# TODO
 
 
 """
@@ -273,7 +253,6 @@ df['A'].values.std(ddof=1) совпадает с pandas.
 г) df.agg({'A': 'sum', 'B': 'max'})       -> A 15, B 50
 """
 
-# TODO
 
 
 """
@@ -290,7 +269,6 @@ df2 = pd.DataFrame([[5, 6], [7, 8]], columns=list('AB'))
 Метод df.append из лекции в современных версиях не существует.
 """
 
-# TODO
 
 
 """
@@ -335,7 +313,6 @@ skills = pd.DataFrame(
    Объясни, почему строк стало больше, чем в employees.
 """
 
-# TODO
 
 
 """
@@ -350,7 +327,6 @@ salary = pd.DataFrame(
 Ожидание: shape (4, 3): employee, group, salary.
 """
 
-# TODO
 
 
 """
@@ -364,7 +340,6 @@ right = pd.DataFrame({"k": ["b", "c", "d"], "v2": [20, 30, 40]})
 Какой how по умолчанию? (inner)  Когда inner молча теряет данные?
 """
 
-# TODO
 
 
 """
@@ -381,7 +356,6 @@ sales = pd.DataFrame({"key": ["A", "B", "C", "A", "B", "C"], "data": range(1, 7)
 г) sales.groupby('key').size()   -> по 2 в каждой группе
 """
 
-# TODO
 
 
 """
@@ -390,7 +364,6 @@ sales.groupby('key')['data'].agg(['min', 'max', 'mean'])
 Ожидание: A: 1, 4, 2.5;  B: 2, 5, 3.5;  C: 3, 6, 4.5
 """
 
-# TODO
 
 
 """
@@ -399,7 +372,6 @@ sales.groupby('key')['data'].agg(['min', 'max', 'mean'])
 Ожидание: группы B и C, shape (4, 2), исходные индексы сохранены (1, 2, 4, 5).
 """
 
-# TODO
 
 
 """
@@ -410,7 +382,6 @@ sales.groupby('key')['data'].agg(['min', 'max', 'mean'])
 Чем transform отличается от agg по форме результата?
 """
 
-# TODO
 
 
 """
@@ -430,7 +401,6 @@ sales2 = pd.DataFrame(
    Ожидание в) и б): M: x=60, y=20;  S: x=90, y=40.
 """
 
-# TODO
 
 
 """
@@ -449,7 +419,6 @@ planets = sns.load_dataset('planets')
    (count не считает NaN, size — все строки)
 """
 
-# TODO
 
 
 """
@@ -474,7 +443,6 @@ titanic = sns.load_dataset('titanic')
 Запиши 2-3 вывода: какие признаки, судя по данным, самые информативные.
 """
 
-# TODO
 
 
 """
@@ -492,4 +460,3 @@ titanic = sns.load_dataset('titanic')
 и по какой причине это завышает оценку качества модели.
 """
 
-# TODO
